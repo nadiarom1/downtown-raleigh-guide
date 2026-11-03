@@ -1,15 +1,22 @@
 
 /* Downtown Raleigh Local Guide */
+:root {
+    --primary-color: #243b53;
+    --background-color: #f5f7fa;
+    --text-color: #333333;
+    --card-color: #ffffff;
+    --link-color: #1f4e79;
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f5f7fa;
-    color: #333333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #243b53;
+    background-color: var(--primary-color);
     color: white;
     padding: 25px;
     text-align: center;
@@ -33,20 +40,22 @@ nav a:hover {
 }
 
 main {
+    box-sizing: border-box;
+    width: calc(100% - 30px);
     max-width: 900px;
     margin: 30px auto;
     padding: 20px;
 }
 
 section {
-    background-color: white;
+    background-color: var(--card-color);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
 }
 
 footer {
-    background-color: #243b53;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 15px;
@@ -57,13 +66,12 @@ body {
     line-height: 1.6;
 }
 
-h2,
-h3 {
-    color: #243b53;
+h2, h3 {
+    color: var(--primary-color);
 }
 
 main a {
-    color: #1f4e79;
+    color: var(--link-color);
 }
 
 main a:hover {
@@ -91,7 +99,7 @@ img {
 .featured article {
     flex: 1;
     min-width: 0;
-    background-color: #f5f7fa;
+    background-color: var(--background-color);
     padding: 20px;
     border-radius: 8px;
 }
