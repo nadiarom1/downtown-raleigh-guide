@@ -58,8 +58,8 @@ nav a:focus-visible {
 }
 
 a:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 5px;
+    outline: 3px solid #f4b942;
+    outline-offset: 4px;
 }
 
 /* Main content */
