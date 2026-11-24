@@ -57,7 +57,23 @@ nav a:focus-visible {
     color: var(--primary-color);
 }
 
+/* Current navigation page */
+nav a[aria-current="page"] {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    border-color: white;
+}
+
+/* Accessible keyboard focus */
 a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+nav a:focus-visible {
     outline: 3px solid #f4b942;
     outline-offset: 4px;
 }
@@ -98,6 +114,7 @@ main > p {
 main a {
     color: var(--link-color);
     text-underline-offset: 4px;
+    overflow-wrap: anywhere;
 }
 
 main a:hover {
@@ -140,9 +157,36 @@ img {
     border-radius: 16px;
 }
 
+/* Homepage skyline image */
+main > figure img {
+    width: 100%;
+}
+
+/* Attraction and dining images */
+section figure {
+    max-width: 650px;
+    margin: 24px auto;
+}
+
+section figure img {
+    width: auto;
+    max-width: 100%;
+    max-height: 420px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Photo attribution */
 figcaption {
     margin-top: 12px;
     font-size: 0.85rem;
+    line-height: 1.5;
+    color: #52606d;
+    text-align: center;
+}
+
+figcaption a {
+    color: var(--link-color);
 }
 
 /* Homepage cards */
@@ -165,17 +209,6 @@ figcaption {
     font-weight: bold;
 }
 
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 28px 20px;
-}
-
-footer p {
-    margin: 0;
-}
 /* Shopping cards */
 .shopping > article {
     background-color: var(--background-color);
@@ -189,7 +222,20 @@ footer p {
     font-family: Georgia, serif;
     font-size: 1.5rem;
 }
-/* Smaller screens */
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive layout for smaller screens */
 @media (max-width: 600px) {
     header {
         padding: 32px 15px 24px;
@@ -203,6 +249,10 @@ footer p {
         font-size: 1.7rem;
     }
 
+    h3 {
+        font-size: 1.2rem;
+    }
+
     nav {
         gap: 8px;
     }
@@ -212,6 +262,7 @@ footer p {
     }
 
     main {
+        width: calc(100% - 20px);
         margin: 24px auto;
         padding: 10px;
     }
@@ -219,6 +270,22 @@ footer p {
     section {
         padding: 22px;
         border-radius: 16px;
+    }
+
+    section figure {
+        margin: 18px 0;
+    }
+
+    section figure img {
+        max-height: 350px;
+    }
+
+    img {
+        border-radius: 12px;
+    }
+
+    figcaption {
+        font-size: 0.8rem;
     }
 
     .featured {
@@ -229,4 +296,10 @@ footer p {
     .featured article {
         padding: 22px;
     }
+
+    .shopping > article {
+        padding: 18px;
+    }
+}
+
 }
