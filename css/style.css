@@ -64,8 +64,9 @@ nav a[aria-current="page"] {
     font-weight: bold;
     text-decoration: underline;
     text-underline-offset: 4px;
-    border-color: white;
+    border-color: transparent;
 }
+
 
 /* Accessible keyboard focus */
 a:focus-visible {
@@ -300,6 +301,4 @@ footer p {
     .shopping > article {
         padding: 18px;
     }
-}
-
 }
